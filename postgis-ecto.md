@@ -42,6 +42,12 @@ config :my_app, MyApp.Repo, types: MyApp.PostgresTypes
     end
 ```
 
+```elixir
+  schema "places" do
+    field(:location, Geo.PostGIS.Geometry)
+  end
+```
+
 ### 5: (optional) Constrain your locations
 
 ```elixir
