@@ -22,7 +22,7 @@ Postgrex.Types.define(
 config :my_app, MyApp.Repo, types: MyApp.PostgresTypes
 ```
 
-### 3: Add a `CREATE EXTENSION postgis` migration
+### 3: Add a `CREATE EXTENSION` migration
 
 ```elixir
   def up do
