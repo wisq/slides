@@ -48,7 +48,7 @@ config :my_app, MyApp.Repo, types: MyApp.PostgresTypes
   end
 ```
 
-### 5: (optional) Constrain your locations
+### 5a: (optional) Constrain your locations
 
 ```elixir
   def up do
@@ -58,4 +58,12 @@ config :my_app, MyApp.Repo, types: MyApp.PostgresTypes
   def down do
     execute("ALTER TABLE places ALTER COLUMN location TYPE geometry")
   end
+```
+
+### 5b: (optional) Create as constrained geometry
+
+```elixir
+    create table("places") do
+      add(:location, :"geometry(Polygon, 4326)")
+    end
 ```
