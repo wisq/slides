@@ -123,7 +123,10 @@ point = %Geo.Point{
 }
 metres = 200_000
 
+# For select(), where(), and other query functions:
 import Ecto.Query
+# For st_distancesphere() and other GIS functions:
+import Geo.PostGIS
 
 MyApp.Place
 |> select([p], {st_distancesphere(p.location, ^point), p})
