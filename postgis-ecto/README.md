@@ -1,4 +1,4 @@
-# Using PostGIS and Ecto
+# Using PostGIS in Ecto
 
 * Presentation: [Installation and usage](slides.md)
 * Example project: [gis_demo](gis_demo/)
